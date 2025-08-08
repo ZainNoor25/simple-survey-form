@@ -1,0 +1,194 @@
+<!-- 
+Survey Form
+Form Fields Name, Email, Gender, Favorite Language, Feedback box
+Use form, input, textarea, select, radio, checkbox
+
+Style it with CSS (background, padding, font) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey-Form</title>
+    <style>
+        /* Set the background color and font for whole page */
+        body{
+            background-color: rgb(6, 169, 210);
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* Style for the main heading */
+        h1{
+            text-align: center;
+            background-color: rgb(4, 106, 137);
+            margin-top: 20px;
+            padding: 15px;
+            color:white;
+           
+           
+        }
+        h1:hover{
+            color:rgb(127, 185, 255)
+        }
+        /* h4{
+            text-align: center;
+            font-size: large;
+            background-color: rgb(4, 106, 137);
+        } */
+        .name{
+            margin: 8px;
+            font-size: medium;
+            border-radius: 5px;
+            
+        }
+        .surname{
+            margin: 8px;
+            font-size: medium;
+            border-radius: 5px;
+        }
+        .email{
+            margin: 8px;
+            font-size: medium;
+            border-radius: 5px;
+        }
+        /* p{
+            text-align: center;
+            background-color: rgb(4, 106, 137);
+            margin-top: 10px;
+            padding: 5px;
+
+        } */
+        main{
+            text-align: center;
+        }
+        /* Common input box styling */
+        input[type="text"],
+        textarea {
+            margin: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgb(4, 106, 137);
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(1, 72, 94);
+        }
+
+        label {
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            border-radius: 5px;
+        }
+        .highlight-text {
+        background-color: rgb(11, 86, 130); 
+        padding: 4px 8px;
+        border-radius: 5px;
+        color:#fff;
+    }
+    
+
+    </style>
+   
+</head>
+
+<body>
+    
+    <header>
+        <!-- Header -->
+        <h1>Survey-Form</h1>
+       
+    </header>
+    <main >
+        <!-- Main Section -->
+        <h4><span class="highlight-text">Fill the Form</span></h4>
+        
+         <!-- Form Starts -->
+        <form method="post" action="#">
+             <!-- Name Input -->
+            <div>
+                <label for="name">First Name</label>
+                <input type="text" class="name" placeholder="Enter Your name" required>
+            </div>
+            <!-- Surname Input -->
+            <div>
+                <label for="surname">Surname</label>
+                <input type="text" class="surname" placeholder="Enter Your Surname" optional >
+            </div>
+             <!-- Email Input -->
+            <div>
+                <label for="email">Email</label>
+                <input type="email" class="email" placeholder="Enter Your Email" required>
+            </div>
+<!-- Gender Radio Buttons -->
+ <div>
+<input type="radio" id="female" name="Gender" value="Female"></input>
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="Gender" value="Male"></input>
+            <label for="male">Male</label>
+ </div>
+            
+
+            <!-- Favorite Language Checkboxes -->
+            <div>
+                <p><span class="highlight-text">Select Favorite Languages:</span></p>
+            
+                <input type="checkbox" id="Language" name="language" value="English"></input>
+           <label for="Language">English
+                 </label>
+                 <br>
+                 <input type="checkbox" id="Language" name="language" value="urdu"></input>
+           <label for="Language">Urdu
+                 </label>
+                 <br>
+                 <input type="checkbox" id="Language" name="language" value="Japanese"></input>
+           <label for="Language">Japanese
+                 </label>
+                 <br>
+                 <input type="checkbox" id="Language" name="language" value="Arabic"></input>
+           <label for="Language">Arabic
+                 </label>
+                 <br>
+                 <input type="checkbox" id="Language" name="language" value="French"></input>
+           <label for="Language">French
+                 </label>
+                 <!-- Feedback Textarea -->
+            <div>
+                <p><span class="highlight-text">Give Your Feedback:</span></p>
+                
+                <textarea name="feedback" placeholder="Enter your feedback here..."></textarea>
+            </div>
+            <!-- Submit Button -->
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+
+           
+            
+        </form>
+       
+
+    </main>
+
+</body>
+
+</html>
